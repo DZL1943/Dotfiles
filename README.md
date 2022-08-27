@@ -1,0 +1,4 @@
+- vim
+- emacs
+- vscode
+- hammerspoon

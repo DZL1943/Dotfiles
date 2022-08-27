@@ -1,0 +1,134 @@
+{
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme":"Dracula Soft",
+    "workbench.preferredDarkColorTheme": "Dracula Soft",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "one",
+    "files.hotExit": "onExitAndWindowClose",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.copyWithSyntaxHighlighting": false,
+    "terminal.integrated.copyOnSelection": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "python.showStartPage": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "files.defaultLanguage": "markdown",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "code-runner.runInTerminal": true,
+    "[lisp]": {
+        "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "vscode-office.autoTheme": true,
+    "winopacity.opacity": 80,
+    "tabnine.experimentalAutoImports": true,
+    "editor.linkedEditing": true,
+    "open-in-browser.default": "Chrome",
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Dracula Soft",
+    "asciidoc.previewFrontMatter": "show",
+    "markdown-preview-enhanced.frontMatterRenderingOption": "code block",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "vim.whichwrap": "b,s,h,l,<,>,[,]",
+    "git.autofetch": true,
+    "vim.hlsearch": true,
+    "vim.overrideCopy": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.lineNumbers": "off",
+    "html.hover.references": false,
+    "editor.wordWrap": "on",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "Lua.telemetry.enable": false,
+    "Notes.notesLocation": "/Users/mac/Documents/Obsidian/000-Inbox",
+    "update.mode": "manual",
+    "settingsSync.ignoredExtensions": [
+        "randomfractalsinc.vscode-data-preview"
+    ],
+    "terminal.integrated.gpuAcceleration": "off",
+    "vscode_vibrancy.opacity": -1,
+    "editor.mouseWheelScrollSensitivity": 0.6,
+
+    // "markdown.marp.themes": [
+    //     "https://example.com/foo/bar/custom-theme.css",
+    //     "./themes/your-theme.css"
+    //   ]
+    "command-runner.commands": {
+        "add-": "perl -p  -e 's/(^(?!-|$)\\s+)/\\1- /g' ${file}"
+    },
+    "replacerules.rules": {
+        "xmind2notion": {
+            "find": "(^(?!-|$)\\s*)",
+            "replace": "$1- "
+        },
+        "space2tab":{
+            "find": "    ",
+            "replace": "\t"
+        },
+        "remove-":{
+            "find": "- ",
+            "replace": ""
+        }
+    },
+    "replacerules.rulesets": {
+        "notion2xmind":{
+            "rules": [
+                "space2tab",
+                "remove-"
+            ]
+        }
+    },
+    "editor.scrollbar.vertical": "hidden",
+    "vscodeGoogleTranslate.preferredLanguage": "Chinese (Simplified)",
+    "markdown.preview.fontSize": 18,
+    "files.autoGuessEncoding": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "vim.startInInsertMode": true,
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "/Users/mac/Workspace/leetcode",
+    "leetcode.defaultLanguage": "python",
+    "leetcode.hint.configWebviewMarkdown": false,
+    "python.defaultInterpreterPath": "/opt/miniconda3/envs/py2/bin/python",
+    "window.commandCenter": true
+}
