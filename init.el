@@ -130,10 +130,10 @@
     ;; (scroll-bar-mode -1)
     (menu-bar-mode 1)
     ;; replaced by centaur-tabs
-    ;; (global-tab-line-mode 1)
-    ;; (set-face-attribute 'tab-line nil :background "#2D3743" :foreground "white" :box nil)
-    ;; (set-face-attribute 'tab-line-tab-inactive nil :background "#2D3743" :foreground "white" :box nil)
-    ;; (set-face-attribute 'tab-line-tab-current nil :background "white" :foreground "blue" :box nil)
+    (global-tab-line-mode 1)
+    (set-face-attribute 'tab-line nil :background "#2D3743" :foreground "white" :box nil)
+    (set-face-attribute 'tab-line-tab-inactive nil :background "#2D3743" :foreground "white" :box nil)
+    (set-face-attribute 'tab-line-tab-current nil :background "white" :foreground "blue" :box nil)
     (when (eq system-type 'darwin)
       (set-face-attribute 'default nil :height 180)
       (set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend))
@@ -395,28 +395,30 @@
 (use-package all-the-icons
   :if (display-graphic-p))
 
-(use-package centaur-tabs
-  :demand
-  :config
-  (centaur-tabs-mode t)
-  (centaur-tabs-headline-match)
-  (setq centaur-tabs-style "bar"
-    centaur-tabs-height 32
-    centaur-tabs-set-icons t
-    centaur-tabs-gray-out-icons 'buffer
-    centaur-tabs-set-modified-marker t
-    centaur-tabs-show-navigation-buttons t
-    centaur-tabs-set-bar 'under
-    x-underline-at-descent-line t
-    centaur-tabs-cycle-scope 'tabs
-    centaur-tabs-show-new-tab-button t
-  )
-  :bind
-  ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward)
-  :hook
-  (dired-mode . centaur-tabs-local-mode)
-)
+(use-package scratch)
+
+;; (use-package centaur-tabs
+;;   :demand
+;;   :config
+;;   (centaur-tabs-mode t)
+;;   (centaur-tabs-headline-match)
+;;   (setq centaur-tabs-style "bar"
+;;     centaur-tabs-height 32
+;;     centaur-tabs-set-icons t
+;;     centaur-tabs-gray-out-icons 'buffer
+;;     centaur-tabs-set-modified-marker t
+;;     centaur-tabs-show-navigation-buttons t
+;;     centaur-tabs-set-bar 'under
+;;     x-underline-at-descent-line t
+;;     centaur-tabs-cycle-scope 'tabs
+;;     centaur-tabs-show-new-tab-button t
+;;   )
+;;   :bind
+;;   ("C-<prior>" . centaur-tabs-backward)
+;;   ("C-<next>" . centaur-tabs-forward)
+;;   :hook
+;;   (dired-mode . centaur-tabs-local-mode)
+;; )
 
 (use-package sis
   :disabled t
