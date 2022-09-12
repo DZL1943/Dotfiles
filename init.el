@@ -1,7 +1,7 @@
                                         ; -*- coding: utf-8 -*-
 ;;; package --- Summary
 ;;; Commentary:
-;;; updated: 20220809
+;;; updated: 20220912
 ;;; Emacs 27.2 @macbook
 ;;; Code:
 (setq package-archives '(
@@ -183,6 +183,7 @@
   ;; (setq org-capture-templates
   ;; '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks") "* TODO %?\n  %i\n  %a")
   ;;   ("j" "Journal" entry (file+datetree "~/org/journal.org") "* %?\nEntered on %U\n  %i\n  %a")))
+  (add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
   (org-babel-do-load-languages 'org-babel-load-languages '((emacs-lisp . t) (shell . t) (python . t))))
 
 (progn
@@ -320,7 +321,7 @@
 (use-package dashboard
   :init
   ;; (dashboard-setup-startup-hook)
-)
+  )
 
 ;; (use-package evil
 ;;   :disabled t
@@ -489,6 +490,29 @@
   :config
   (setq grip-binary-path "/opt/homebrew/bin/grip")
   (setq grip-preview-use-webkit t))
+
+(use-package plantuml-mode
+  :config
+  (setq plantuml-jar-path "~/opt/plantuml.jar")
+  (setq plantuml-default-exec-mode 'jar)
+  :mode (("\\.plantuml\\'" . plantuml-mode))
+  )
+
+(use-package org-mind-map
+  :init
+  (require 'ox-org)
+  :ensure t
+  ;; Uncomment the below if 'ensure-system-packages` is installed
+  ;;:ensure-system-package (gvgen . graphviz)
+  :config
+  (setq org-mind-map-engine "dot")       ; Default. Directed Graph
+  ;; (setq org-mind-map-engine "neato")  ; Undirected Spring Graph
+  ;; (setq org-mind-map-engine "twopi")  ; Radial Layout
+  ;; (setq org-mind-map-engine "fdp")    ; Undirected Spring Force-Directed
+  ;; (setq org-mind-map-engine "sfdp")   ; Multiscale version of fdp for the layout of large graphs
+  ;; (setq org-mind-map-engine "twopi")  ; Radial layouts
+  ;; (setq org-mind-map-engine "circo")  ; Circular Layout
+  )
 
 (use-package vimrc-mode
   :init
