@@ -48,7 +48,7 @@
             "strings": "off",
             "other": "off"
         },
-        "editor.tabSize": 2,
+        // "editor.tabSize": 4,
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
     "vscode-office.autoTheme": true,
@@ -130,5 +130,7 @@
     "leetcode.defaultLanguage": "python",
     "leetcode.hint.configWebviewMarkdown": false,
     "python.defaultInterpreterPath": "/opt/miniconda3/envs/py2/bin/python",
+    "terminal.integrated.inheritEnv": false,
+    "markdown.extension.list.indentationSize": "inherit",
     "window.commandCenter": true
 }

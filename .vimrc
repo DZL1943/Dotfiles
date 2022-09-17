@@ -2,10 +2,11 @@
 "" updated: 20220115
 
 if has("gui_running")
-    set gfn=Menlo-Regular:h16
+    set gfn=Menlo-Regular:h18
     set lines=38 columns=100
     colorscheme desert
     set guioptions-=r
+    " set transparency=10  " set it at .gvimrc
 endif
 
 
