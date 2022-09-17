@@ -8,10 +8,10 @@ if has("gui_running")
     colorscheme desert
     set guioptions-=r
     set guioptions+=k
-    " set transparency=10  " set it at .gvimrc
+    set transparency=10  " set it at .gvimrc
 endif
 
-
+set shortmess=atl   " set it at .gvimrc, and i don't know why it not working at terminal
 syntax enable
 set nocp
 set mouse=a
