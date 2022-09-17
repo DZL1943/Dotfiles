@@ -1,11 +1,12 @@
 "" for macvim
-"" updated: 20220115
+"" updated: 20220917
 
 if has("gui_running")
     set gfn=Menlo-Regular:h18
     set lines=38 columns=100
     colorscheme desert
     set guioptions-=r
+    set guioptions+=k
     " set transparency=10  " set it at .gvimrc
 endif
 
