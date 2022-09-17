@@ -1,4 +1,4 @@
 - vim
 - emacs
-- vscode
+- vscode: ~/Library/Application\ Support/Code/User/settings.json
 - hammerspoon
