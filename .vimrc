@@ -4,6 +4,7 @@
 if has("gui_running")
     set gfn=Menlo-Regular:h18
     set lines=38 columns=100
+    winp 100 10
     colorscheme desert
     set guioptions-=r
     set guioptions+=k
@@ -39,7 +40,7 @@ set wildmenu
 set ls=2
 set stl=%<%f\%w%h%m%r\ [%{&ff}/%Y]
 set acd
-
+set showtabline=1
 
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 "let g:Powerline_colorscheme='solarized256'
