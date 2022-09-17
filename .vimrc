@@ -3,8 +3,8 @@
 
 if has("gui_running")
     set gfn=Menlo-Regular:h18
-    set lines=38 columns=100
-    winp 100 10
+    set lines=35 columns=90
+    winp 140 20
     colorscheme desert
     set guioptions-=r
     set guioptions+=k
