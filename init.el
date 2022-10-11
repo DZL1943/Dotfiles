@@ -50,8 +50,11 @@
 ;;(add-to-list 'file-coding-system-alist '("\\.org\\'" . utf-8))
 
 (if (version<= "26.0.50" emacs-version)
-    ;; (global-display-line-numbers-mode)
-    (global-linum-mode t))
+    ;; (progn
+    ;;   (global-display-line-numbers-mode)
+    ;;   (setq-default display-line-numbers-type 'relative)
+    ;;   (setq-default display-line-numbers-width 2))
+  (global-linum-mode t))
 
 ;; (set-face-background 'line-number "#2D3743")
 ;; (set-face-foreground 'line-number-current-line "yellow")
@@ -63,7 +66,7 @@
 (show-paren-mode t)
 (electric-pair-mode t)
 (ido-mode t)
-(cua-mode t)
+;; (cua-mode t)
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 (setq-default fill-column 80)
@@ -390,7 +393,7 @@
 (use-package spacemacs-theme
   :defer t
   ;; :init (load-theme 'spacemacs-dark t)
-)
+  )
 
 (use-package all-the-icons
   :if (display-graphic-p))
