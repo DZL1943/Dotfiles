@@ -17,6 +17,7 @@ set nocp
 set mouse=a
 set nu
 set ru
+set rnu
 set cul
 set cuc
 set ts=4
@@ -26,6 +27,7 @@ set et
 "set list
 set backspace=indent,eol,start
 set hls
+set ic
 set scs    " smartcase
 set is    " incsearch
 set sm    " showmatch
