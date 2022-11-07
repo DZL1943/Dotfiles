@@ -40,7 +40,7 @@ set wrap
 set whichwrap=b,s,<,>,[,]
 set wildmenu
 set ls=2
-set stl=%<%f\%w%h%m%r\ [%{&ff}/%Y]
+"set stl=%<%f\%w%h%m%r\ [%{&ff}/%Y]
 set acd
 set showtabline=1
 
