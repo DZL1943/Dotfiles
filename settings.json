@@ -13,7 +13,7 @@
     "terminal.integrated.copyOnSelection": true,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
-        "*.md": "vscode.markdown.preview.editor"
+        // "*.md": "vscode.markdown.preview.editor"
     },
     "python.showStartPage": false,
     "notebook.cellToolbarLocation": {
@@ -49,10 +49,10 @@
             "other": "off"
         },
         // "editor.tabSize": 4,
-        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+        // "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     },
-    "vscode-office.autoTheme": true,
-    "winopacity.opacity": 80,
+    // "vscode-office.autoTheme": true,
+    // "winopacity.opacity": 80,
     "tabnine.experimentalAutoImports": true,
     "editor.linkedEditing": true,
     "open-in-browser.default": "Chrome",
@@ -80,13 +80,13 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.donotShowInfoMsg": true,
     "Lua.telemetry.enable": false,
-    "Notes.notesLocation": "/Users/mac/Documents/Obsidian/000-Inbox",
+    // "Notes.notesLocation": "/Users/mac/Documents/Obsidian/000-Inbox",
     "update.mode": "manual",
     "settingsSync.ignoredExtensions": [
         "randomfractalsinc.vscode-data-preview"
     ],
     "terminal.integrated.gpuAcceleration": "off",
-    "vscode_vibrancy.opacity": -1,
+    // "vscode_vibrancy.opacity": -1,
     "editor.mouseWheelScrollSensitivity": 0.6,
 
     // "markdown.marp.themes": [
@@ -129,7 +129,7 @@
     "leetcode.workspaceFolder": "/Users/mac/Workspace/leetcode",
     "leetcode.defaultLanguage": "python",
     "leetcode.hint.configWebviewMarkdown": false,
-    "python.defaultInterpreterPath": "/opt/miniconda3/envs/py2/bin/python",
+    // "python.defaultInterpreterPath": "/opt/miniconda3/envs/py2/bin/python",
     "terminal.integrated.inheritEnv": false,
     "markdown.extension.list.indentationSize": "inherit",
     "window.commandCenter": true
