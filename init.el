@@ -126,7 +126,7 @@
       (mouse-wheel-mode 1)
       (menu-bar-mode -1)
       (global-hl-line-mode -1)
-      ;; (load-theme 'tango-dark' t)
+      (load-theme 'tango-dark' t)
       )
   (progn
     (tool-bar-mode -1)
