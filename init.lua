@@ -12,10 +12,10 @@ obj._metadata = {
 
 obj.cfg = {}
 obj.map = {
-    reloadConfig = { { 'ctrl', 'cmd' }, 'r' },
+    reloadConfig = { { 'ctrl', 'alt' }, 'r' },
     toggleHelp = { { 'ctrl', 'alt' }, '/' },
-    windowManager = { { 'alt', 'cmd' }, 'w' },
-    toggleClock = {{'ctrl', 'cmd'}, 't'},
+    windowManager = { { 'ctrl', 'alt' }, 'w' },
+    toggleClock = {{'ctrl', 'alt'}, 't'},
 }
 obj.spoons = {}
 
@@ -78,7 +78,7 @@ function obj:_setupReloadConfig()
 end
 
 function obj:_setupAppLauncher(keymap, modifiers)
-    local modifiers = modifiers or 'ctrl+alt'
+    local modifiers = modifiers or 'ctrl+cmd'
     local keymap = keymap or {
         a = 'App Store',
         b = 'Safari',
@@ -93,12 +93,12 @@ function obj:_setupAppLauncher(keymap, modifiers)
         --j = 'Activity Monitor',
         --k = 'Shortcuts',
         --l = 'Launchpad',
-        m = 'QQMusic',
+        m = 'com.tencent.QQMusicMac',
         n = 'Notion',
         --o = 'Microsoft Outlook',
         o = 'Obsidian',
         p = 'Photos',
-        q = 'QQ',
+        q = 'QQ-NT',
         r = 'Reminders',
         s = 'System Preferences',
         t = 'iTerm',
@@ -112,7 +112,9 @@ function obj:_setupAppLauncher(keymap, modifiers)
 
     for k, v in pairs(keymap) do
         hs.hotkey.bind(modifiers, k, function()
-            hs.application.launchOrFocus(v)
+            if not hs.application.launchOrFocus(v) then
+                hs.application.launchOrFocusByBundleID(v)
+            end
         end)
         -- update obj.map
         obj.map[v] = { modifiers, k }
