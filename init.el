@@ -26,6 +26,7 @@
       visible-bell nil)
 (setq help-window-select 't)
 (setq initial-major-mode 'text-mode)
+(add-hook 'text-mode-hook (lambda () (text-scale-increase 2)))
 
 ;; (prefer-coding-system 'cp950)
 ;; (prefer-coding-system 'gb2312)
