@@ -35,6 +35,7 @@ function obj:start()
     obj:_setupAppLauncher()
     obj:_setupWindowManager()
     obj:_toggleClock(true)
+    -- obj:_mousetap()
     return self
 end
 
@@ -78,7 +79,7 @@ function obj:_setupReloadConfig()
 end
 
 function obj:_setupAppLauncher(keymap, modifiers)
-    local modifiers = modifiers or 'ctrl+cmd'
+    local modifiers = modifiers or 'alt+cmd'
     local keymap = keymap or {
         a = 'App Store',
         b = 'Safari',
@@ -99,7 +100,7 @@ function obj:_setupAppLauncher(keymap, modifiers)
         --o = 'Microsoft Outlook',
         o = 'Obsidian',
         p = 'Photos',
-        q = 'QQ-NT',
+        q = 'QQ',
         r = 'Reminders',
         s = 'System Preferences',
         t = 'iTerm',
@@ -259,6 +260,39 @@ function obj:_toggleClock(bool)
             clockCanvas:show()
         end
     end
+end
+
+function obj:_mousetap()
+    -- positive multiplier (== natural scrolling) makes mouse work like traditional scrollwheel
+    local scrollmult = 4
+
+    -- The were all events logged, when using `{"all"}`
+    mousetap = hs.eventtap.new({"all"}, function(e)
+        local oldmousepos = hs.mouse.absolutePosition()
+        -- local mods = hs.eventtap.checkKeyboardModifiers()
+        local pressedMouseButton = e:getProperty(hs.eventtap.event.properties['mouseEventButtonNumber'])
+        -- print(pressedMouseButton)
+
+        local typ = e:getType(true)
+        if typ == 27 then
+            -- 按住中键左右拖拽实现水平滚动 (若无效请先关闭其他手势监控软件)
+            -- print(typ)
+            local dx = e:getProperty(hs.eventtap.event.properties['eventUnacceleratedPointerMovementX'])
+            local dy = e:getProperty(hs.eventtap.event.properties['eventUnacceleratedPointerMovementY'])
+            -- print(dx)
+            -- print(dy)
+            local scroll = hs.eventtap.event.newScrollEvent({dx * scrollmult, dy * scrollmult},{},'pixel')
+            scroll:post()
+            
+            -- put the mouse back
+            -- hs.mouse.absolutePosition(oldmousepos)
+            
+            return true, {scroll}
+        else
+            return false, {}
+        end
+    end)
+    mousetap:start()
 end
 
 ---- main
