@@ -36,7 +36,8 @@ set smd    " showmode
 set sc    " showcmd
 set ai
 set fen    " foldenable
-"set fdm=indent
+set fdm=indent
+set foldlevelstart=99
 set wrap
 set whichwrap=b,s,<,>,[,]
 set wildmenu
