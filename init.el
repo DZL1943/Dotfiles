@@ -263,6 +263,17 @@
   :init
   (add-hook 'after-init-hook 'global-flycheck-mode))
 
+(use-package eglot
+  :ensure t
+  :commands (eglot eglot-ensure)
+  :hook ((python-mode . eglot-ensure)
+         (rust-mode . eglot-ensure))
+  :config
+  (setq eglot-strict-mode nil)
+  (setq eglot-confirm-server-initiated-edits nil)
+
+  (add-to-list 'eglot-server-programs '(rust-mode "rust-analyzer")))
+
 (use-package smartparens
   :init
   (add-hook 'prog-mode-hook 'smartparens-mode))
@@ -556,9 +567,16 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode)))
 
+(use-package json-mode
+  :ensure t)
+
 (use-package lua-mode
   :config
   (setq lua-indent-level 4))
+
+(use-package rust-mode
+  :ensure t
+  :mode ("\\.rs\\'" . rust-mode))
 
 (use-package pcre2el)
 
