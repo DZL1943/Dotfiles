@@ -55,7 +55,7 @@
     ;;   (global-display-line-numbers-mode)
     ;;   (setq-default display-line-numbers-type 'relative)
     ;;   (setq-default display-line-numbers-width 2))
-  (global-linum-mode t))
+    (global-linum-mode t))
 
 ;; (set-face-background 'line-number "#2D3743")
 ;; (set-face-foreground 'line-number-current-line "yellow")
@@ -577,6 +577,8 @@
 (use-package rust-mode
   :ensure t
   :mode ("\\.rs\\'" . rust-mode))
+
+(use-package scala-mode)
 
 (use-package pcre2el)
 
