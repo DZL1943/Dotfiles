@@ -115,7 +115,7 @@
 (global-set-key (kbd "C-c C") 'calendar)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "ESC ESC") 'view-mode)
+(global-set-key (kbd "ESC ESC") 'view-mode)  ;; c-x c-q readonly mode
 
 (global-set-key (kbd "C-c I") (lambda()(interactive)(find-file "~/.emacs.d/init.el")))
 ;; toggle transparency
